@@ -37,5 +37,28 @@ precip <- function(t){
   return(8e-3)
 }
 
+## Net balance function
+net_balance_fn <- function(dt, Ts, Ps, melt_factor, T_threshold){
+  total <- 0
+  for(i in 1:length(Ts)){
+    balance_rate = -melt(Ts[i], melt_factor) + accumulate(Ts[i], Ps[i], T_threshold)
+    total = total + balance_rate * dt
+  }
+  return(total)
+}
+
+## Net balance over whole glacier # NOT FINISHED ADAPTATION FROM PYTHON CODE!
+glacier_net_balance_fn <- function(zs, dt, Ts, Ps, melt_factor, T_threshold, lapse_rate){
+  glacier_net_balance  <- 0
+  net_balance <- rep(0,length(zs))
+  for(i in 1:length(zs)){
+    for( j in 1:length(Ts)){
+      TT <- lapse(Ts[j], zs[i], lapse_rate )
+    }
+    net_balance[i] <- net_balance_fn(dt, TT, Ps, melt_factor, T_threshold)
+    glacier_net_balance <- glacier_net_balance + net_balance[i]
+  }
+  #return([glacier_net_balance / len(zs), net_balance])
+}
 
 
