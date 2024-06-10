@@ -34,3 +34,21 @@ def melt(T, melt_factor):
 # melt_factor = 0.1  # Example melt factor
 # melt_rate = melt(temperature, melt_factor)
 # print(f"Melt rate: {melt_rate}")
+
+
+
+def lapse(T, dz, lapse_rate):
+      """
+    Calculate the glacier lapse rate based on temperature.
+
+    Parameters:
+    T (float): Temperature at a given altitude and time.
+    lapse_rate: 
+
+    Returns:
+    float: lapsed temperature
+    """  
+    
+    lapsed_T = lapse_rate*dz + T
+    return lapsed_T
+
