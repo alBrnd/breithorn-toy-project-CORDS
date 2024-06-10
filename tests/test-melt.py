@@ -1,9 +1,10 @@
 
 import pytest
+import sys
 import os
-dirname = os.path.dirname(__file__)
-foldername = os.path.join(dirname, '../src')
-from foldername import melt  # Replace 'your_module' with the name of the module where accumulate is defined
+# Add the src directory to the sys.path
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '../src')))
+import melt
 
 def test_accumulate_above_threshold():
     """
