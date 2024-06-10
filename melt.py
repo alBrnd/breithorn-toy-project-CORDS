@@ -28,6 +28,24 @@ def melt(T, melt_factor):
         return 0
 
 
+## Accumulation rate function
+def accumulate(T, P, T_threshold):
+    """
+    Calculate the accumulation on the glacier based on temperature, a temperature threshold and precipitation.
+
+    Parameters:
+    T (float): Temperature at a given altitude and time.
+    P (float): Precipitation on the glacier.
+    T_threshold (float): Temperature threshold below which the snow starts accumulating the precipitation
+    Returns:
+    float: accumulation.
+    """
+  if T <= T_threshold :
+    return P
+  else: 
+    return 0
+
+
 
 # # Example usage:
 # temperature = 5  # Example temperature in degrees Celsius
