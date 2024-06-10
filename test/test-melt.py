@@ -1,14 +1,9 @@
 
 import pytest
 import os
-<<<<<<< Updated upstream
 dirname = os.path.dirname(__file__)
 foldername = os.path.join(dirname, '../src')
 from foldername import melt  # Replace 'your_module' with the name of the module where accumulate is defined
-=======
-os.chdir("./src/")
-import melt  # Replace 'your_module' with the name of the module where accumulate is defined
->>>>>>> Stashed changes
 
 def test_accumulate_above_threshold():
     """
