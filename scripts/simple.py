@@ -59,30 +59,22 @@ Ps = synthetic_P(t)
 melt.net_balance_fn(dt, Ts, Ps, melt_factor, T_threshold)
 
 # Run the model for one year for the whole glacier
-# xs, zs = synthetic_glacier()
-# Ts = synthetic_T(t)
+xs, zs = synthetic_glacier()
+Ts = synthetic_T(t)
 
-# def glacier_balance(xs, zs, Ts, Ps, T_threshold, melt_factor):
-#     # Implement the function to calculate glacier balance
-#     total_massbalance = []
-#     point_massbalance = []
-#     # Calculate the mass balance for each point
-#     return total_massbalance, point_massbalance
+total_massbalance, point_massbalance = glacier_net_balance_fn(zs, dt, Ts, Ps, melt_factor, T_threshold, lapse_rate)
+plt.figure()
+plt.plot(xs, point_massbalance)
+plt.xlabel('Distance (km)')
+plt.ylabel('Point Mass Balance')
+plt.title('Glacier Point Mass Balance')
+plt.show()
 
-# total_massbalance, point_massbalance = glacier_balance(xs, zs, Ts, Ps, T_threshold, melt_factor)
-
-# plt.figure()
-# plt.plot(xs, point_massbalance)
-# plt.xlabel('Distance (km)')
-# plt.ylabel('Point Mass Balance')
-# plt.title('Glacier Point Mass Balance')
-# plt.show()
-
-# # Generate output table
-# out = []
-# for dT in range(-4, 5):
-#     Ts_ = synthetic_T(t) + dT
-#     # run model
-#     # store in out
-#     pass
-
+""" ## Generate output table
+# make a table of mass-balance for different temperature offsets and store it
+out = []
+for dT = -4:4
+    Ts_ = synthetic_T.(t) .+ dT
+    # run model
+    # store in out
+end """
