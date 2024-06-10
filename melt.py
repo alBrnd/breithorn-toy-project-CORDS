@@ -56,7 +56,7 @@ def accumulate(T, P, T_threshold):
 
 
 def lapse(T, dz, lapse_rate):
-      """
+    """
     Calculate the glacier lapse rate based on temperature.
 
     Parameters:
