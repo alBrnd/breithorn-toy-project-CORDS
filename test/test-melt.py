@@ -1,6 +1,6 @@
 
 import pytest
-import melt  # Replace 'your_module' with the name of the module where accumulate is defined
+from src import melt  # Replace 'your_module' with the name of the module where accumulate is defined
 
 def test_accumulate_above_threshold():
     """
