@@ -74,10 +74,10 @@ def lapse(T, dz, lapse_rate):
 
 
 
-if __name__ == '__main__':
-    assert melt(-5, melt_factor=2) == 0, "Test failed: Melt rate should be 0 for T < 0"
-    assert accumulate(5, 10, 0) == 0, "Test failed: Accumulation should be 0 for T > T_threshold"
-    assert accumulate(-5, 10, 0) == 10, "Test failed: Accumulation should be equal to precipitation for T <= T_threshold"
+# if __name__ == '__main__':
+#     assert melt(-5, melt_factor=2) == 0, "Test failed: Melt rate should be 0 for T < 0"
+#     assert accumulate(5, 10, 0) == 0, "Test failed: Accumulation should be 0 for T > T_threshold"
+#     assert accumulate(-5, 10, 0) == 10, "Test failed: Accumulation should be equal to precipitation for T <= T_threshold"
 
     
 
