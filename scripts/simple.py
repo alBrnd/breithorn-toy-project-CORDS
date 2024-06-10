@@ -8,6 +8,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 import sys
 import os
+import pandas as pd
 
 # Add the src directory to the sys.path
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '../src')))
@@ -62,19 +63,40 @@ melt.net_balance_fn(dt, Ts, Ps, melt_factor, T_threshold)
 xs, zs = synthetic_glacier()
 Ts = synthetic_T(t)
 
-total_massbalance, point_massbalance = glacier_net_balance_fn(zs, dt, Ts, Ps, melt_factor, T_threshold, lapse_rate)
+total_massbalance, point_massbalance = melt.glacier_net_balance_fn(zs, dt, Ts, Ps, melt_factor, T_threshold, lapse_rate)
 plt.figure()
 plt.plot(xs, point_massbalance)
 plt.xlabel('Distance (km)')
-plt.ylabel('Point Mass Balance')
-plt.title('Glacier Point Mass Balance')
+plt.ylabel('Total Mass Balance')
+plt.title('Glacier Mass Balance')
 plt.show()
 
-""" ## Generate output table
+## Generate output table
 # make a table of mass-balance for different temperature offsets and store it
+# out = []
+# for dT in range(-4, 5):
+#     Ts_ = synthetic_T(t) + dT
+#     # run model
+#     total_massbalance, point_massbalance = melt.glacier_net_balance_fn(zs, dT, Ts_, Ps, melt_factor, T_threshold, lapse_rate)
+#     out[]
+#     # store in ou
+
+# Initialize an empty list to store the results
 out = []
-for dT = -4:4
-    Ts_ = synthetic_T.(t) .+ dT
-    # run model
-    # store in out
-end """
+
+# Loop over temperature offsets and store the results in a DataFrame
+for dT in range(-4, 5):
+    Ts_ = synthetic_T(t) + dT
+    total_massbalance, point_massbalance = melt.glacier_net_balance_fn(zs, dT, Ts_, Ps, melt_factor, T_threshold, lapse_rate)
+    # Append the results to the list
+    out.append({
+        'dT': dT,
+        'total_massbalance': total_massbalance,
+        'point_massbalance': point_massbalance
+    })
+
+# Convert the list of results to a DataFrame
+df = pd.DataFrame(out)
+
+# Display the DataFrame
+print(df)

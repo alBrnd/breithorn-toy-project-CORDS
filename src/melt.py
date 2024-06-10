@@ -11,6 +11,8 @@ Created on Mon Jun 10 08:37:32 2024
 
 # signature: (T, melt_factor) -> meltrate (m/d)
 
+import numpy as np
+
 def melt(T, melt_factor):
     """
     Calculate the glacier melt rate based on temperature and melt factor.
