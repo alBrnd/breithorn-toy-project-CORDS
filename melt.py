@@ -40,10 +40,10 @@ def accumulate(T, P, T_threshold):
     Returns:
     float: accumulation.
     """
-  if T <= T_threshold :
-    return P
-  else: 
-    return 0
+    if T <= T_threshold :
+      return P
+    else: 
+      return 0
 
 
 
