@@ -13,8 +13,9 @@ import pandas as pd
 # Add the src directory to the sys.path
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '../src')))
 
-# Now you can import functions from melt.py
+# import functions from melt.py and utils.py
 import melt
+import utils
 
 
 # Define the synthetic weather and glacier
@@ -64,12 +65,23 @@ xs, zs = synthetic_glacier()
 Ts = synthetic_T(t)
 
 total_massbalance, point_massbalance = melt.glacier_net_balance_fn(zs, dt, Ts, Ps, melt_factor, T_threshold, lapse_rate)
+
 plt.figure()
 plt.plot(xs, point_massbalance)
 plt.xlabel('Distance (km)')
 plt.ylabel('Total Mass Balance')
 plt.title('Glacier Mass Balance')
+#plt.show()
+
+# Generate the versioned filename
+basename = "glacier_point_mass_balance"
+ext = "png"
+versioned_filename = utils.generate_versioned_filename(basename, ext)
+
+# Save the plot as a .png file
+plt.savefig(versioned_filename)
 plt.show()
+
 
 ## Generate output table
 # make a table of mass-balance for different temperature offsets and store it
@@ -100,3 +112,9 @@ df = pd.DataFrame(out)
 
 # Display the DataFrame
 print(df)
+
+# Generate the versioned filename
+basename = "glacier_mass_balance_overTemperature"
+ext = "csv"
+versioned_filename_df = utils.generate_versioned_filename(basename, ext)
+df.to_csv(versioned_filename_df)
