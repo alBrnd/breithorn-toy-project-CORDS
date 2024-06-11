@@ -31,7 +31,7 @@ t <- seq(from=0, to=365 + dt, by=dt)
 
 # Plot the synthetic weather
 Ts <- synthetic_T(t)
-png(filename=gitHash(paste0('../../res/',Sys.Date(),'SyntheticTemperature'),'png')) # To export the file
+png(filename=gitHash(paste0('../../results/',Sys.Date(),'SyntheticTemperature'),'png')) # To export the file
 plot(t,Ts, main="Synthetic Temperature", xlab='Time (days)', ylab='Temperature (°C)', type = 'l')
 dev.off()
 
