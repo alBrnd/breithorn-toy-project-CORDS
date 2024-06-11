@@ -33,8 +33,29 @@ unzip_one_file <- function(zipfile,filename, destination_file){
 # unzip_one_file("../../data/swissBOUNDARIES3D.zip", NULL, "../../data/swissBOUNDARIES3D/")
 # unzip_one_file("../../data/swissBOUNDARIES3D.zip", "swissBOUNDARIES3D_1_5_TLM_BEZIRKSGEBIET.cpg", "../../data/swissBOUNDARIES3D2/")
 
+# Function to read in Campbell data
+read_campbell <- function(filename){
+
+  dat <- read.table(filename, sep=",")
+  y <- dat[,2]
+  d <- dat[,3]
+  hm <- dat[,4]
+  t <- parse_campbell_date_time(y,d,hm)
+  # go from 30min dt to 60 min
+  t <- t[seq(1,length(t),by=2)]
+  temp <- dat[seq(1,length(t),by=2),6]
+  res <- data.frame(
+    t = t,
+    temp = temp
+  )
+  return(res)
+}
 
 
-
+parse_campbell_date_time <- function(year, day, HHMM){
+  hour <- floor(HHMM/100)
+  min <- HHMM - 100*hour
+  return(day-1 + hour/24 + min/24/60)
+}
 
 
