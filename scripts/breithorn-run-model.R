@@ -21,3 +21,13 @@ Ps <- rep(Ps0,length(Ts))
 png(filename=gitHash(paste0(results_path,Sys.Date(),'SyntheticTemperature'),'png')) # To export the file
 plot(t,Ts, type="l", main="Recorded Temperatures", xlab="time", ylab="Temperature (°C)")
 dev.off()
+
+png(filename=gitHash(paste0(results_path,Sys.Date(),'dem'),'png')) # To export the file
+plot(dem, main="Digital Elevation Model")
+dev.off()
+
+png(filename=gitHash(paste0(results_path,Sys.Date(),'mask'),'png')) # To export the file
+plot(mask, main="Glacier Mask")
+dev.off()
+
+
