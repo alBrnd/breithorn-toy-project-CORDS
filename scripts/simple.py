@@ -13,7 +13,7 @@ import pandas as pd
 # Add the src directory to the sys.path
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '../src')))
 
-# Now you can import functions from melt.py
+# import functions from melt.py and utils.py
 import melt
 import utils
 
@@ -65,6 +65,7 @@ xs, zs = synthetic_glacier()
 Ts = synthetic_T(t)
 
 total_massbalance, point_massbalance = melt.glacier_net_balance_fn(zs, dt, Ts, Ps, melt_factor, T_threshold, lapse_rate)
+
 plt.figure()
 plt.plot(xs, point_massbalance)
 plt.xlabel('Distance (km)')
