@@ -1,5 +1,4 @@
-### README Documentation for Glacier Mass Balance Model
-
+## toy research project
 ---
 
 ## Glacier Mass Balance Model
@@ -15,6 +14,8 @@ This project is a simple glacier mass balance model implemented in Python. The m
 │   └── utils.py
 ├── scripts
 │   └── simple.py
+├── tests
+│   └── test-melt.py
 ├── README.md
 ```
 
@@ -23,6 +24,7 @@ This project is a simple glacier mass balance model implemented in Python. The m
 - **src/melt.py**: Contains core functions for calculating melt rates, accumulation rates, and net balance.
 - **src/utils.py**: Contains utility functions, including a function to generate versioned filenames using the current git hash.
 - **scripts/simple.py**: A script that imports functions from `melt.py` and `utils.py` to run the glacier mass balance model and generate plots.
+- **tests/test-melt.py**: Contains unit tests for the `melt.py` functions using the `pytest` framework.
 
 ### Installation
 
@@ -34,7 +36,7 @@ This project is a simple glacier mass balance model implemented in Python. The m
 
 2. **Install dependencies**:
     ```bash
-    pip install numpy pandas matplotlib gitpython
+    pip install numpy pandas matplotlib gitpython pytest
     ```
 
 ### Usage
@@ -54,6 +56,20 @@ The `generate_versioned_filename` function in `utils.py` generates filenames tha
 #### 3. Plotting Results
 
 The `simple.py` script generates plots of synthetic temperature data and glacier mass balance, saving the plots with versioned filenames.
+
+### Running Tests
+
+To run the tests, use `pytest`:
+
+```bash
+pytest tests/test-melt.py
+```
+
+#### `tests/test-melt.py`
+
+This file contains unit tests for the functions in `melt.py`.
+
+
 
 ### Functions
 
@@ -172,4 +188,4 @@ This project is licensed under ...
 
 ---
 
-This README provides an overview of the glacier mass balance model, instructions for running the model, descriptions of the key functions, and example usage. Adjust the example and function details to fit the specifics of your implementation if necessary.
+This README provides an overview of the glacier mass balance model, instructions for running the model and tests, descriptions of the key functions, and example usage. Adjust the example and function details to fit the specifics of your implementation if necessary.
