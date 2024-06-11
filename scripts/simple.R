@@ -31,7 +31,7 @@ t <- seq(from=0, to=365 + dt, by=dt)
 
 # Plot the synthetic weather
 Ts <- synthetic_T(t)
-png(filename="../res/test.png") # To export the file
+png(filename=gitHash(paste0('../res/',Sys.Date(),'SyntheticTemperature'),'png')) # To export the file
 plot(t,Ts, main="Synthetic Temperature", xlab='Time (days)', ylab='Temperature (°C)', type = 'l')
 dev.off()
 
@@ -79,4 +79,4 @@ net_balance_fn(dt, Ts, Ps, melt_factor, T_threshold)
 gitHash(paste0(Sys.Date(),'GlacierMassBalance'),'txt')
 gitLog <- system('git log', intern = TRUE)
 
-write(gitLog, file = gitHash(paste0('../res/',Sys.Date(),'GlacierMassBalance'),'txt'), append = FALSE)
+write(gitLog, file = gitHash(paste0('../res/',Sys.Date(),'GitLog'),'txt'), append = FALSE)

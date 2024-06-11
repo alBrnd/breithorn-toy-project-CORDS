@@ -1,3 +1,53 @@
+commit b15bf309e0f3cb1b28b55ac9454c99f102c24de6
+Author: CecNyff <cecile.nyffeler@wsl.ch>
+Date:   Tue Jun 11 10:50:56 2024 +0200
+
+    Add files that weren't in previous commit
+
+commit 10523064609ffbbaf1d1c4ed271f8f334e52eee1
+Merge: 0dc4bb0 e64b82c
+Author: CecNyff <cecile.nyffeler@wsl.ch>
+Date:   Tue Jun 11 10:46:36 2024 +0200
+
+    Merge branch 'master' of https://github.com/alBrnd/breithorn-toy-project-CORDS
+
+commit 0dc4bb0a52dc5c7ec03917f989139e34d4b67980
+Author: CecNyff <cecile.nyffeler@wsl.ch>
+Date:   Tue Jun 11 10:45:59 2024 +0200
+
+    R scripts updated and addition of git hash and figure saving
+
+commit e64b82c38dc5bf51ca40f8581a8625be8bf6e441
+Merge: 009bdae e3a527b
+Author: alBrnd <aline.bornand@wsl.ch>
+Date:   Tue Jun 11 10:16:11 2024 +0200
+
+    Merge branch 'master' of https://github.com/alBrnd/breithorn-toy-project-CORDS
+
+commit 009bdae5abc0a6c4ebdad6a0ac6f9db84fc0f8b0
+Author: alBrnd <aline.bornand@wsl.ch>
+Date:   Tue Jun 11 10:15:59 2024 +0200
+
+    update
+
+commit e3a527b4671c0873032153168e75b509d8a62cc7
+Author: alBrnd <70213067+alBrnd@users.noreply.github.com>
+Date:   Tue Jun 11 10:14:37 2024 +0200
+
+    Update README.md
+
+commit 9d55e93ee970f2418411632b169822de0823b338
+Author: alBrnd <70213067+alBrnd@users.noreply.github.com>
+Date:   Tue Jun 11 10:07:54 2024 +0200
+
+    Create README.md
+
+commit 8fcab27617fa976b2291c843c2a44b4b03f303da
+Author: alBrnd <aline.bornand@wsl.ch>
+Date:   Tue Jun 11 09:51:15 2024 +0200
+
+    output files with git hash
+
 commit 3f0d4df58596942755853fdd663505f93621a3db
 Author: alBrnd <aline.bornand@wsl.ch>
 Date:   Mon Jun 10 16:40:01 2024 +0200
