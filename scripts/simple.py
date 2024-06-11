@@ -17,7 +17,9 @@ sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '../src'
 import melt
 import utils
 
-results_path = "D:/CORDS/breithorn/results/"
+main_path = "D:/CORDS/Breithorn-project"
+os.chdir(main_path)
+results_path = os.path.join(main_path, "results/")
 
 # Define the synthetic weather and glacier
 def synthetic_T(t):
