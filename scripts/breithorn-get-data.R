@@ -27,7 +27,3 @@ download_file("https://github.com/mauro3/CORDS/raw/master/data/workshop-reproduc
 unzip_one_file(paste0(data_path,"swisstopo_dhm200_cropped.zip"),
                NULL,
                data_path)
-
-## Some extra data, manually entered
-z_weather_station = 2650 # elevation of weather station [m]
-Ps0 = 0.005 # mean (and constant) precipitation rate [m/d]
