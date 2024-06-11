@@ -1,0 +1,162 @@
+commit 3f0d4df58596942755853fdd663505f93621a3db
+Author: alBrnd <aline.bornand@wsl.ch>
+Date:   Mon Jun 10 16:40:01 2024 +0200
+
+    make massbalance table
+
+commit 9cbefc1c51189f4f138663807439f1518436c675
+Author: CecNyff <cecile.nyffeler@wsl.ch>
+Date:   Mon Jun 10 16:17:54 2024 +0200
+
+    Added code implementation for whole glacier
+
+commit 0068bae18a5ea96631bedb559da43f4ac0273752
+Author: alBrnd <aline.bornand@wsl.ch>
+Date:   Mon Jun 10 16:02:49 2024 +0200
+
+    set paths
+
+commit d9294f350c56afdcb20dd2470f6ebeb94cd12619
+Merge: e6d1219 8ea4580
+Author: alBrnd <aline.bornand@wsl.ch>
+Date:   Mon Jun 10 14:50:05 2024 +0200
+
+    Merge branch 'master' of https://github.com/alBrnd/breithorn-toy-project-CORDS
+
+commit e6d1219d0a4dd81e8d20edae3f1b66b78f38ebc9
+Author: alBrnd <aline.bornand@wsl.ch>
+Date:   Mon Jun 10 14:49:47 2024 +0200
+
+    added simple.py
+
+commit 8ea4580433fc21c9037bbce59045f0aae1f88f2d
+Author: CecNyff <cecile.nyffeler@wsl.ch>
+Date:   Mon Jun 10 14:27:30 2024 +0200
+
+    Started adapting R code - ongoing work
+
+commit 6236bf99e85e60d8ddf6e17b719323c38924e373
+Author: CecNyff <cecile.nyffeler@wsl.ch>
+Date:   Mon Jun 10 14:15:26 2024 +0200
+
+    Accepted changes
+
+commit 41a51bf7c07a3fc3ef35854923d44dfb593eee84
+Author: alBrnd <aline.bornand@wsl.ch>
+Date:   Mon Jun 10 14:14:35 2024 +0200
+
+    apply changes
+
+commit 470ae4ea05540b81e9b85d0404f10f4279ee45b2
+Author: CecNyff <cecile.nyffeler@wsl.ch>
+Date:   Mon Jun 10 14:07:59 2024 +0200
+
+    changed relative path in test
+
+commit e0d6dd7a2c3844c773677124575ca492354f294b
+Author: CecNyff <cecile.nyffeler@wsl.ch>
+Date:   Mon Jun 10 14:02:31 2024 +0200
+
+    Added os package to test file
+
+commit 77909b75827791e8c10322b892ec55ee12ad8030
+Merge: 9ff8c34 2951fac
+Author: alBrnd <70213067+alBrnd@users.noreply.github.com>
+Date:   Mon Jun 10 13:59:51 2024 +0200
+
+    Merge pull request #1 from vboussange/patch-1
+    
+    Added `glacier_net_balance_fn` and `net_balance_fn`
+
+commit 2951fac5536d634da5f1c804f70ced9d72079951
+Author: vboussange <vic.boussange@gmail.com>
+Date:   Mon Jun 10 13:52:54 2024 +0200
+
+    Added `glacier_net_balance_fn` and `net_balance_fn`
+    
+    Please check that the functions correctly work and integrate with you previously defined functions!
+
+commit 9ff8c34c86d2e24e77138dcb7df4e455f162c854
+Merge: 9f7f94a 39bcf29
+Author: alBrnd <aline.bornand@wsl.ch>
+Date:   Mon Jun 10 13:50:47 2024 +0200
+
+    Merge branch 'master' of https://github.com/alBrnd/breithorn-toy-project-CORDS
+
+commit 9f7f94ab080b8b9fd830fe31a27437a5888c5789
+Author: alBrnd <aline.bornand@wsl.ch>
+Date:   Mon Jun 10 13:50:25 2024 +0200
+
+    import melt from src
+
+commit 39bcf2927d0cee91d5bb313da8130442231e8792
+Author: CecNyff <cecile.nyffeler@wsl.ch>
+Date:   Mon Jun 10 13:49:35 2024 +0200
+
+    moved script
+
+commit 32cf663176f30171ce16c0d05e4826bf2dff0a0f
+Author: alBrnd <aline.bornand@wsl.ch>
+Date:   Mon Jun 10 13:45:20 2024 +0200
+
+    changed pytest
+
+commit 7330868d79779143e3ee3aabaec304962ee58884
+Author: alBrnd <aline.bornand@wsl.ch>
+Date:   Mon Jun 10 13:35:44 2024 +0200
+
+    pytest
+
+commit 388f972aecda6c716d847d4a93115dd62099699d
+Author: CecNyff <cecile.nyffeler@wsl.ch>
+Date:   Mon Jun 10 13:27:50 2024 +0200
+
+    Added test file for melt
+
+commit 2ba6fdc9eee620c570e1f949dc3408bd2a791f6b
+Author: CecNyff <cecile.nyffeler@wsl.ch>
+Date:   Mon Jun 10 13:25:33 2024 +0200
+
+    Moved code to src folder and added test folder
+
+commit 934b374bda177cf9a034737b62ac2dc8a662e807
+Author: alBrnd <aline.bornand@wsl.ch>
+Date:   Mon Jun 10 12:15:30 2024 +0200
+
+    added test assertions
+
+commit 8253aeebea5fff2f5715ec4e1de1c0f7ef0fd35d
+Author: alBrnd <aline.bornand@wsl.ch>
+Date:   Mon Jun 10 11:38:19 2024 +0200
+
+    fixed indentation
+
+commit be1ccf9073bb4d2ced83f76c6ed6adad5c43c230
+Author: alBrnd <aline.bornand@wsl.ch>
+Date:   Mon Jun 10 11:36:26 2024 +0200
+
+    fixed indentation
+
+commit 67914cfb41f23140ebc431de26be655040426805
+Author: CecNyff <cecile.nyffeler@wsl.ch>
+Date:   Mon Jun 10 11:31:16 2024 +0200
+
+    Added accumulation funtion
+
+commit eebbe00c148101001e861bce7e6f50d8ee713e50
+Author: alBrnd <aline.bornand@wsl.ch>
+Date:   Mon Jun 10 11:28:46 2024 +0200
+
+    added lapse to melt.py
+
+commit 8a171327ba1fd734bf7ae9a7a628f2fd1eb83d1e
+Author: CecNyff <cecile.nyffeler@wsl.ch>
+Date:   Mon Jun 10 11:18:58 2024 +0200
+
+    Glacier mass balance in R
+
+commit 012b2a4a7f461a5cff3df30c1d7ff24eea630bb5
+Author: alBrnd <aline.bornand@wsl.ch>
+Date:   Mon Jun 10 11:13:01 2024 +0200
+
+    created melt.py
