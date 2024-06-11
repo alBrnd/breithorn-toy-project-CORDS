@@ -88,10 +88,14 @@ def unzip_one_file(zipfile_path, filename, destination_file):
         else:
             print(f"{filename} not found in the zip archive.")
 
-# Example usage:
-# zipfile_path = 'data/archive.zip'
-# filename = 'datafile.txt'
-# destination_file = 'data/unzipped_datafile.txt'
-# unzip_one_file(zipfile_path, filename, destination_file)
 
-    
+# Example usage:
+# url = "https://doi.glamos.ch/data/inventory/inventory_sgi2016_r2020.zip"
+# destination_file = "D:/CORDS/Breithorn-project/data/inventory_sgi2016_r2020.zip"
+# download_file(url, destination_file)
+
+
+# zipfile_path = "D:/CORDS/Breithorn-project/data/inventory_sgi2016_r2020.zip"
+# filename = 'SGI_2016_surfacetype_10m_LV95.tif'
+# destination_file = 'D:/CORDS/Breithorn-project/data/inventory_sgi2016_r2020.tif'
+# unzip_one_file(zipfile_path, filename, destination_file)
