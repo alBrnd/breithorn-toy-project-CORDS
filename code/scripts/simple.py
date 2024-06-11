@@ -17,6 +17,7 @@ sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '../src'
 import melt
 import utils
 
+results_path = "D:/CORDS/breithorn/results/"
 
 # Define the synthetic weather and glacier
 def synthetic_T(t):
@@ -79,7 +80,7 @@ ext = "png"
 versioned_filename = utils.generate_versioned_filename(basename, ext)
 
 # Save the plot as a .png file
-plt.savefig(versioned_filename)
+plt.savefig(results_path+versioned_filename)
 plt.show()
 
 
@@ -117,4 +118,4 @@ print(df)
 basename = "glacier_mass_balance_overTemperature"
 ext = "csv"
 versioned_filename_df = utils.generate_versioned_filename(basename, ext)
-df.to_csv(versioned_filename_df)
+df.to_csv(results_path+versioned_filename_df)
