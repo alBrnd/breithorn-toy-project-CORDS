@@ -99,3 +99,52 @@ def unzip_one_file(zipfile_path, filename, destination_file):
 # filename = 'SGI_2016_surfacetype_10m_LV95.tif'
 # destination_file = 'D:/CORDS/Breithorn-project/data/inventory_sgi2016_r2020.tif'
 # unzip_one_file(zipfile_path, filename, destination_file)
+
+
+import pandas as pd
+from datetime import datetime, timedelta
+
+def parse_campbell_date_time(year, day_of_year, hour_minute):
+    """
+    Parses Campbell date and time format.
+    
+    Parameters:
+    year (int): Year
+    day_of_year (int): Day of the year
+    hour_minute (int): Time in HHMM format
+    
+    Returns:
+    datetime: Parsed datetime object
+    """
+    hour = hour_minute // 100
+    minute = hour_minute % 100
+    return datetime(year, 1, 1) + timedelta(days=day_of_year - 1, hours=hour, minutes=minute)
+
+def read_campbell(file):
+    """
+    Reads a Campbell logger format file with temperature.
+
+    Parameters:
+    file (str): Path to the Campbell logger format file.
+
+    Returns:
+    tuple: (t, T)
+    - t (list): List of datetime objects
+    - T (list): List of temperature values in Celsius
+    """
+    dat = pd.read_csv(file, header=None)
+    y = dat.iloc[:, 1]
+    d = dat.iloc[:, 2]
+    hm = dat.iloc[:, 3]
+    
+    t = [parse_campbell_date_time(year, day, hour_minute) for year, day, hour_minute in zip(y, d, hm)]
+    
+    # Go from 30 min dt to 60 min
+    t = t[::2]
+    temp = dat.iloc[::2, 5]
+    
+    return t, temp.tolist()
+
+# Example usage:
+# file_path = "path_to_campbell_file.csv"
+# t, temp = read_campbell(file_path)
